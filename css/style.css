@@ -1,0 +1,109 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #9fa4c4;
+  background-image: linear-gradient(315deg, #9fa4c4 0%, #9e768f 74%);
+  height: 100vh;
+}
+
+.carousel {
+  top: 100px;
+  position: relative;
+  height: 500px;
+  width: 50%;
+  margin: 0 auto;
+  border: 10px double #222;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel__track-container {
+  height: 100%;
+  background-color: none;
+  overflow: hidden;
+}
+
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  /* right: 0 !important; */
+}
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.carousel__button img {
+  width: 40px;
+  height: auto;
+}
+
+.carousel__button--left {
+  /* background-color: yellow; */
+  left: -50px;
+  opacity: 0.8;
+}
+
+.carousel__button--right {
+  right: -50px;
+  opacity: 0.9;
+}
+
+.carousel__nav {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.carousel__indicator {
+  margin: 5px;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  background: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.current-slide {
+  background: rgb(0, 0, 0, 0.75);
+}
+
+.hide {
+  display: none;
+}
